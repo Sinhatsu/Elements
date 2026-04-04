@@ -12,7 +12,17 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
@@ -48,7 +58,9 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "eslint-plugin-storybook": "10.3.4",
     "globals": "^17.4.0",
+    "husky": "^9.1.7",
     "jsdom": "^29.0.1",
+    "lint-staged": "^16.4.0",
     "playwright": "^1.61.1",
     "prettier": "^3.8.1",
     "storybook": "10.3.4",
