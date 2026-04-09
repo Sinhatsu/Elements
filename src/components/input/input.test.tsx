@@ -40,7 +40,7 @@ describe('Input', () => {
 
     const input = screen.getByRole('textbox', { name: 'Email address' });
     expect(input).toHaveAttribute('aria-invalid', 'true');
-    expect(input).toHaveClass('aria-invalid:border-red-500');
+    expect(input).toHaveClass('aria-invalid:border-destructive');
   });
 
   it('prevents interaction while disabled', async () => {
