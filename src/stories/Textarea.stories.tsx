@@ -1,0 +1,50 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+
+import { Textarea } from '@/components/textarea';
+
+const meta = {
+  title: 'Components/Textarea',
+  component: Textarea,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  args: {
+    'aria-label': 'Message',
+    placeholder: 'Write your message…',
+  },
+} satisfies Meta<typeof Textarea>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+
+export const WithHelperText: Story = {
+  args: {
+    helperText: 'Maximum 280 characters',
+  },
+};
+
+export const Invalid: Story = {
+  args: {
+    defaultValue: 'Too short',
+    error: 'Please provide a more detailed message.',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    defaultValue: 'This message cannot be changed.',
+    disabled: true,
+  },
+};
+
+export const ResizeOptions: Story = {
+  render: () => (
+    <div className="grid w-80 gap-4">
+      <Textarea aria-label="Vertical resize" resize="vertical" placeholder="Vertical resize" />
+      <Textarea aria-label="No resize" resize="none" placeholder="No resize" />
+    </div>
+  ),
+};
