@@ -54,6 +54,22 @@ describe('Textarea', () => {
       'aria-describedby',
       screen.getByText('A biography is required').id,
     );
+    expect(screen.getByRole('alert')).toHaveTextContent('A biography is required');
+  });
+
+  it('preserves consumer-provided descriptions', () => {
+    render(
+      <Textarea
+        aria-describedby="format-hint"
+        aria-label="Bio"
+        helperText="Maximum 280 characters"
+      />,
+    );
+
+    expect(screen.getByRole('textbox', { name: 'Bio' })).toHaveAttribute(
+      'aria-describedby',
+      expect.stringContaining('format-hint'),
+    );
   });
 
   it('supports disabled and resize states', () => {

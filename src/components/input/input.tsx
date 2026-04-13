@@ -1,24 +1,58 @@
-import { forwardRef, type ComponentPropsWithoutRef } from 'react';
+import { forwardRef, type ComponentPropsWithoutRef, type ReactNode } from 'react';
 
+import { fieldControlVariants } from '@/components/field/field-control-variants';
+import { FieldMessage } from '@/components/field/field-message';
 import { cn } from '@/lib/cn';
+import { useFieldDescription } from '@/hooks/use-field-description';
 
 export interface InputProps extends ComponentPropsWithoutRef<'input'> {
+  error?: ReactNode;
+  helperText?: ReactNode;
   invalid?: boolean;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type = 'text', invalid = false, 'aria-invalid': ariaInvalid, ...props }, ref) => (
-    <input
-      ref={ref}
-      type={type}
-      aria-invalid={invalid || ariaInvalid || undefined}
-      className={cn(
-        'flex h-9 w-full min-w-0 rounded-md border border-input bg-background px-3 py-1 text-base text-foreground shadow-xs outline-none transition-[color,box-shadow] placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 md:text-sm',
-        className,
-      )}
-      {...props}
-    />
-  ),
+  (
+    {
+      className,
+      type = 'text',
+      invalid = false,
+      error,
+      helperText,
+      id,
+      'aria-describedby': ariaDescribedBy,
+      'aria-invalid': ariaInvalid,
+      ...props
+    },
+    ref,
+  ) => {
+    const field = useFieldDescription({
+      ariaDescribedBy,
+      ariaInvalid: invalid ? true : ariaInvalid,
+      error,
+      helperText,
+      id,
+    });
+
+    return (
+      <div className="grid w-full gap-1.5">
+        <input
+          ref={ref}
+          id={field.fieldId}
+          type={type}
+          aria-describedby={field.ariaDescribedBy}
+          aria-invalid={field.ariaInvalid}
+          className={cn(fieldControlVariants({ control: 'input' }), className)}
+          {...props}
+        />
+        {field.message !== undefined && field.message !== null ? (
+          <FieldMessage id={field.messageId} error={field.hasError}>
+            {field.message}
+          </FieldMessage>
+        ) : null}
+      </div>
+    );
+  },
 );
 
 Input.displayName = 'Input';

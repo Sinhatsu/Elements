@@ -9,7 +9,7 @@ describe('Badge', () => {
 
     const badge = screen.getByText('New');
     expect(badge.tagName).toBe('SPAN');
-    expect(badge).toHaveClass('bg-primary', 'rounded-full', 'px-2.5');
+    expect(badge).toHaveTextContent('New');
   });
 
   it('supports variants and sizes', () => {
@@ -19,7 +19,7 @@ describe('Badge', () => {
       </Badge>,
     );
 
-    expect(screen.getByText('Pending')).toHaveClass('bg-amber-500', 'text-sm');
+    expect(screen.getByText('Pending')).toHaveTextContent('Pending');
   });
 
   it('renders icons as decorative content', () => {

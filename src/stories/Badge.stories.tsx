@@ -3,12 +3,19 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Check, ChevronRight, Clock } from 'lucide-react';
 
 import { Badge } from '@/components/badge';
+import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Badge',
   component: Badge,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'Badge communicates compact metadata. Use an accessible label when its visual text is insufficient context.',
+      },
+    },
   },
   tags: ['autodocs'],
   args: {
@@ -56,4 +63,11 @@ export const WithIcons: Story = {
       </Badge>
     </div>
   ),
+};
+
+export const DarkMode: Story = {
+  decorators: [withDarkTheme],
+  args: {
+    children: 'New release',
+  },
 };

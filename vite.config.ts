@@ -1,5 +1,3 @@
-/// <reference types="vitest/config" />
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
@@ -16,6 +14,17 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(dirname, 'src'),
+    },
+  },
+  build: {
+    emptyOutDir: false,
+    lib: {
+      entry: path.resolve(dirname, 'src/index.ts'),
+      formats: ['es'],
+      fileName: 'index',
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
     },
   },
 

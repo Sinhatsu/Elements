@@ -35,12 +35,27 @@ describe('Input', () => {
     expect(input).toHaveValue('design system');
   });
 
-  it('marks invalid inputs for assistive technology', () => {
-    render(<Input invalid aria-label="Email address" />);
+  it('connects validation messaging to assistive technology', () => {
+    render(<Input error="Enter a valid email address" aria-label="Email address" />);
 
     const input = screen.getByRole('textbox', { name: 'Email address' });
     expect(input).toHaveAttribute('aria-invalid', 'true');
-    expect(input).toHaveClass('aria-invalid:border-destructive');
+    expect(input).toHaveAttribute('aria-describedby', screen.getByRole('alert').getAttribute('id'));
+  });
+
+  it('preserves consumer-provided descriptions when helper text is present', () => {
+    render(
+      <Input
+        aria-describedby="email-hint"
+        aria-label="Email address"
+        helperText="Work email only"
+      />,
+    );
+
+    expect(screen.getByRole('textbox', { name: 'Email address' })).toHaveAttribute(
+      'aria-describedby',
+      expect.stringContaining('email-hint'),
+    );
   });
 
   it('prevents interaction while disabled', async () => {

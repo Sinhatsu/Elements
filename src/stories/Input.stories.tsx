@@ -1,12 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Input } from '@/components/input';
+import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Input',
   component: Input,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'Input supports native controlled and uncontrolled usage. Pair errors with helper text when validation context is needed.',
+      },
+    },
   },
   tags: ['autodocs'],
   args: {
@@ -40,10 +47,23 @@ export const Invalid: Story = {
   },
 };
 
+export const WithHelperText: Story = {
+  args: {
+    helperText: 'We will only use this address for account notifications.',
+  },
+};
+
 export const Password: Story = {
   args: {
     type: 'password',
     placeholder: 'Enter your password',
     'aria-label': 'Password',
+  },
+};
+
+export const DarkMode: Story = {
+  decorators: [withDarkTheme],
+  args: {
+    defaultValue: 'jane@example.com',
   },
 };

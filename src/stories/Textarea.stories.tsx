@@ -1,12 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Textarea } from '@/components/textarea';
+import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Textarea',
   component: Textarea,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'Textarea provides native controlled and uncontrolled behavior with optional validation and helper text.',
+      },
+    },
   },
   tags: ['autodocs'],
   args: {
@@ -47,4 +54,11 @@ export const ResizeOptions: Story = {
       <Textarea aria-label="No resize" resize="none" placeholder="No resize" />
     </div>
   ),
+};
+
+export const DarkMode: Story = {
+  decorators: [withDarkTheme],
+  args: {
+    defaultValue: 'A dark-theme message stays readable without changing the component API.',
+  },
 };

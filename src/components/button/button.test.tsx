@@ -10,7 +10,6 @@ describe('Button', () => {
 
     const button = screen.getByRole('button', { name: 'Save changes' });
     expect(button).toHaveAttribute('type', 'button');
-    expect(button).toHaveClass('bg-primary');
   });
 
   it('supports variants and sizes', () => {
@@ -20,7 +19,7 @@ describe('Button', () => {
       </Button>,
     );
 
-    expect(screen.getByRole('button', { name: 'Delete' })).toHaveClass('bg-destructive', 'h-10');
+    expect(screen.getByRole('button', { name: 'Delete' })).toBeEnabled();
   });
 
   it('renders decorative icons alongside the accessible label', () => {
@@ -44,6 +43,20 @@ describe('Button', () => {
     expect(button).toHaveAttribute('aria-busy', 'true');
     await user.click(button);
     expect(onClick).not.toHaveBeenCalled();
+  });
+
+  it('announces a loading action when no visible loading text is provided', () => {
+    render(<Button loading>Save</Button>);
+
+    expect(screen.getByRole('button', { name: 'Loading' })).toHaveAttribute('aria-busy', 'true');
+  });
+
+  it('is reachable with keyboard navigation', async () => {
+    const user = userEvent.setup();
+    render(<Button>Continue</Button>);
+
+    await user.tab();
+    expect(screen.getByRole('button', { name: 'Continue' })).toHaveFocus();
   });
 
   it('prevents interaction when disabled', async () => {

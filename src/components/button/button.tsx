@@ -27,6 +27,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       disabled,
       children,
       type = 'button',
+      'aria-label': ariaLabel,
       ...props
     },
     ref,
@@ -39,6 +40,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type={type}
         className={cn(buttonVariants({ variant, size }), loading && 'cursor-wait', className)}
         disabled={isDisabled}
+        aria-label={loading ? (loadingText ?? 'Loading') : ariaLabel}
         aria-busy={loading || undefined}
         {...props}
       >

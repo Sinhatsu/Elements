@@ -4,12 +4,19 @@ import { ArrowRight, Mail, Plus } from 'lucide-react';
 import { fn } from 'storybook/test';
 
 import { Button } from '@/components/button';
+import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Button',
   component: Button,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'Use Button for user-initiated actions. Icon-only buttons require an accessible name.',
+      },
+    },
   },
   tags: ['autodocs'],
   args: { onClick: fn() },
@@ -70,5 +77,12 @@ export const Disabled: Story = {
   args: {
     children: 'Submit',
     disabled: true,
+  },
+};
+
+export const DarkMode: Story = {
+  decorators: [withDarkTheme],
+  args: {
+    children: 'Continue',
   },
 };
