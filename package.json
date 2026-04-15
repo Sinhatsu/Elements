@@ -45,6 +45,7 @@
     "./styles.css": "./dist/index.css"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.21",
     "@radix-ui/react-slot": "^1.2.4",
     "@tailwindcss/vite": "^4.2.2",
     "@tanstack/react-table": "^8.21.3",
