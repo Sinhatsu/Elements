@@ -33,4 +33,14 @@ export {
   DialogTrigger,
 } from './components/dialog';
 export { Input, type InputProps } from './components/input';
+export {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  type TabsContentProps,
+  type TabsListProps,
+  type TabsProps,
+  type TabsTriggerProps,
+} from './components/tabs';
 export { Textarea, type TextareaProps } from './components/textarea';
