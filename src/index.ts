@@ -44,3 +44,17 @@ export {
   type TabsTriggerProps,
 } from './components/tabs';
 export { Textarea, type TextareaProps } from './components/textarea';
+export {
+  Tooltip,
+  TooltipArrow,
+  TooltipContent,
+  TooltipPortal,
+  TooltipProvider,
+  TooltipTrigger,
+  type TooltipArrowProps,
+  type TooltipContentProps,
+  type TooltipPortalProps,
+  type TooltipProps,
+  type TooltipProviderProps,
+  type TooltipTriggerProps,
+} from './components/tooltip';
