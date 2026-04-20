@@ -34,6 +34,22 @@ export {
 } from './components/dialog';
 export { Input, type InputProps } from './components/input';
 export {
+  Popover,
+  PopoverAnchor,
+  PopoverArrow,
+  PopoverClose,
+  PopoverContent,
+  PopoverPortal,
+  PopoverTrigger,
+  type PopoverAnchorProps,
+  type PopoverArrowProps,
+  type PopoverCloseProps,
+  type PopoverContentProps,
+  type PopoverPortalProps,
+  type PopoverProps,
+  type PopoverTriggerProps,
+} from './components/popover';
+export {
   Tabs,
   TabsContent,
   TabsList,
