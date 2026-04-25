@@ -21,6 +21,26 @@ export {
   CardTitle,
 } from './components/card';
 export {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+  type CommandDialogProps,
+  type CommandEmptyProps,
+  type CommandGroupProps,
+  type CommandInputProps,
+  type CommandItemProps,
+  type CommandListProps,
+  type CommandProps,
+  type CommandSeparatorProps,
+  type CommandShortcutProps,
+} from './components/command';
+export {
   Dialog,
   DialogClose,
   DialogContent,
