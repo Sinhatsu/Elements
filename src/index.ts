@@ -13,6 +13,15 @@ export {
 export { Badge, badgeVariants, type BadgeProps } from './components/badge';
 export { Button, buttonVariants, type ButtonProps } from './components/button';
 export {
+  DataTable,
+  type ColumnDef,
+  type DataTableProps,
+  type PaginationState,
+  type RowSelectionState,
+  type SortingState,
+  type VisibilityState,
+} from './components/data-table';
+export {
   Card,
   CardContent,
   CardDescription,
