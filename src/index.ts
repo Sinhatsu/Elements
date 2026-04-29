@@ -13,6 +13,13 @@ export {
 export { Badge, badgeVariants, type BadgeProps } from './components/badge';
 export { Button, buttonVariants, type ButtonProps } from './components/button';
 export {
+  FileUpload,
+  type Accept,
+  type FileRejection,
+  type FileUploadProps,
+  type Validator,
+} from './components/file-upload';
+export {
   DataTable,
   type ColumnDef,
   type DataTableProps,
