@@ -101,6 +101,7 @@ export {
   type DropdownMenuTriggerProps,
 } from './components/dropdown-menu';
 export { Input, type InputProps } from './components/input';
+export { OtpInput, type OtpInputProps } from './components/otp-input';
 export {
   Popover,
   PopoverAnchor,
