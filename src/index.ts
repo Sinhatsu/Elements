@@ -194,3 +194,4 @@ export {
   type TooltipTriggerProps,
 } from './components/tooltip';
 export { Separator, type SeparatorProps } from './components/separator';
+export { Spinner, spinnerVariants, type SpinnerProps } from './components/spinner';
