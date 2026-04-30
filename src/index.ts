@@ -203,3 +203,4 @@ export {
   type AvatarImageProps,
   type AvatarProps,
 } from './components/avatar';
+export { Skeleton, type SkeletonProps } from './components/skeleton';
