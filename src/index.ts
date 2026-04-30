@@ -195,3 +195,11 @@ export {
 } from './components/tooltip';
 export { Separator, type SeparatorProps } from './components/separator';
 export { Spinner, spinnerVariants, type SpinnerProps } from './components/spinner';
+export {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  type AvatarFallbackProps,
+  type AvatarImageProps,
+  type AvatarProps,
+} from './components/avatar';
