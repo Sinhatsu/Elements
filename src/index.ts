@@ -193,3 +193,4 @@ export {
   type TooltipProviderProps,
   type TooltipTriggerProps,
 } from './components/tooltip';
+export { Separator, type SeparatorProps } from './components/separator';
