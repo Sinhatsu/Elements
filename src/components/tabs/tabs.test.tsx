@@ -100,7 +100,7 @@ describe('Tabs', () => {
     const account = screen.getByRole('tab', { name: 'Account' });
     const password = screen.getByRole('tab', { name: 'Password' });
 
-    account.focus();
+    await user.click(account);
     expect(account).toHaveFocus();
 
     await user.keyboard('{ArrowRight}');
@@ -123,7 +123,7 @@ describe('Tabs', () => {
 
     expect(screen.getByRole('tablist')).toHaveAttribute('aria-orientation', 'vertical');
 
-    account.focus();
+    await user.click(account);
     await user.keyboard('{ArrowDown}');
     expect(password).toHaveFocus();
     expect(password).toHaveAttribute('aria-selected', 'true');

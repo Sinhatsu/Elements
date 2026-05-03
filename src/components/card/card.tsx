@@ -2,7 +2,9 @@ import { type ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/cn';
 
-export function Card({ className, ...props }: ComponentPropsWithoutRef<'section'>) {
+export type CardProps = ComponentPropsWithoutRef<'section'>;
+
+export function Card({ className, ...props }: CardProps) {
   return (
     <section
       data-slot="card"
@@ -15,13 +17,17 @@ export function Card({ className, ...props }: ComponentPropsWithoutRef<'section'
   );
 }
 
-export function CardHeader({ className, ...props }: ComponentPropsWithoutRef<'div'>) {
+export type CardHeaderProps = ComponentPropsWithoutRef<'div'>;
+
+export function CardHeader({ className, ...props }: CardHeaderProps) {
   return (
     <div data-slot="card-header" className={cn('grid gap-1.5 px-6 pt-6', className)} {...props} />
   );
 }
 
-export function CardTitle({ className, ...props }: ComponentPropsWithoutRef<'h3'>) {
+export type CardTitleProps = ComponentPropsWithoutRef<'h3'>;
+
+export function CardTitle({ className, ...props }: CardTitleProps) {
   return (
     <h3
       data-slot="card-title"
@@ -31,7 +37,9 @@ export function CardTitle({ className, ...props }: ComponentPropsWithoutRef<'h3'
   );
 }
 
-export function CardDescription({ className, ...props }: ComponentPropsWithoutRef<'p'>) {
+export type CardDescriptionProps = ComponentPropsWithoutRef<'p'>;
+
+export function CardDescription({ className, ...props }: CardDescriptionProps) {
   return (
     <p
       data-slot="card-description"
@@ -41,11 +49,15 @@ export function CardDescription({ className, ...props }: ComponentPropsWithoutRe
   );
 }
 
-export function CardContent({ className, ...props }: ComponentPropsWithoutRef<'div'>) {
+export type CardContentProps = ComponentPropsWithoutRef<'div'>;
+
+export function CardContent({ className, ...props }: CardContentProps) {
   return <div data-slot="card-content" className={cn('px-6 py-6', className)} {...props} />;
 }
 
-export function CardFooter({ className, ...props }: ComponentPropsWithoutRef<'div'>) {
+export type CardFooterProps = ComponentPropsWithoutRef<'div'>;
+
+export function CardFooter({ className, ...props }: CardFooterProps) {
   return (
     <div
       data-slot="card-footer"

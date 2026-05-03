@@ -12,6 +12,7 @@ export {
 } from './components/accordion';
 export { Badge, badgeVariants, type BadgeProps } from './components/badge';
 export { Button, buttonVariants, type ButtonProps } from './components/button';
+export { FieldMessage, fieldControlVariants } from './components/field';
 export {
   FileUpload,
   type Accept,
@@ -35,6 +36,12 @@ export {
   CardFooter,
   CardHeader,
   CardTitle,
+  type CardContentProps,
+  type CardDescriptionProps,
+  type CardFooterProps,
+  type CardHeaderProps,
+  type CardProps,
+  type CardTitleProps,
 } from './components/card';
 export {
   Command,
@@ -67,6 +74,16 @@ export {
   DialogPortal,
   DialogTitle,
   DialogTrigger,
+  type DialogCloseProps,
+  type DialogContentProps,
+  type DialogDescriptionProps,
+  type DialogFooterProps,
+  type DialogHeaderProps,
+  type DialogOverlayProps,
+  type DialogPortalProps,
+  type DialogProps,
+  type DialogTitleProps,
+  type DialogTriggerProps,
 } from './components/dialog';
 export {
   DropdownMenu,
@@ -204,3 +221,4 @@ export {
   type AvatarProps,
 } from './components/avatar';
 export { Skeleton, type SkeletonProps } from './components/skeleton';
+export { useFieldDescription } from './hooks/use-field-description';

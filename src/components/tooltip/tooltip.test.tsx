@@ -65,7 +65,7 @@ describe('Tooltip', () => {
     render(<TestTooltip />);
 
     const trigger = screen.getByRole('button', { name: 'Show tip' });
-    trigger.focus();
+    await user.tab();
 
     expect(await screen.findByRole('tooltip', { name: 'Helpful tip' })).toBeInTheDocument();
 
@@ -186,8 +186,7 @@ describe('Tooltip', () => {
       </TooltipProvider>,
     );
 
-    const trigger = screen.getByRole('button', { name: 'Show tip' });
-    trigger.focus();
+    await user.tab();
     expect(await screen.findByRole('tooltip')).toBeInTheDocument();
 
     await user.tab();
