@@ -11,7 +11,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/select';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Select',
@@ -111,9 +110,4 @@ export const Disabled: Story = {
       </SelectContent>
     </Select>
   ),
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => <BasicSelect />,
 };

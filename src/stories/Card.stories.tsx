@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/card';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Card',
@@ -53,18 +52,6 @@ export const ContentOnly: Story = {
       <CardContent>
         <p className="text-sm">A Card can contain only the content needed for the context.</p>
       </CardContent>
-    </Card>
-  ),
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => (
-    <Card className="w-96" aria-labelledby="dark-card-title">
-      <CardHeader>
-        <CardTitle id="dark-card-title">Dark surface</CardTitle>
-        <CardDescription>Semantic Card tokens adapt to the chocolate dark theme.</CardDescription>
-      </CardHeader>
     </Card>
   ),
 };

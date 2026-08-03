@@ -12,7 +12,6 @@ import {
   Toaster,
   toast,
 } from '@/components/toast';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Toast',
@@ -84,9 +83,4 @@ export const Queue: Story = {
       <Toaster maxVisible={2} />
     </>
   ),
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => <ToastPreview variant="info" />,
 };

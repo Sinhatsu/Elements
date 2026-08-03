@@ -10,7 +10,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/popover';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Popover',
@@ -131,9 +130,4 @@ export const Controlled: Story = {
       </div>
     );
   },
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => <BasicPopover />,
 };

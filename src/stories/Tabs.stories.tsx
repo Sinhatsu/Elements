@@ -1,9 +1,7 @@
 import { useState, type ComponentProps } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/tabs';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Tabs',
@@ -88,9 +86,4 @@ export const Controlled: Story = {
 
 export const DisabledTab: Story = {
   render: () => <AccountTabs defaultValue="profile" showDisabled />,
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => <AccountTabs defaultValue="profile" />,
 };

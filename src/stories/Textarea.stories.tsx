@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Textarea } from '@/components/textarea';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Textarea',
@@ -54,11 +53,4 @@ export const ResizeOptions: Story = {
       <Textarea aria-label="No resize" resize="none" placeholder="No resize" />
     </div>
   ),
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  args: {
-    defaultValue: 'A dark-theme message stays readable without changing the component API.',
-  },
 };

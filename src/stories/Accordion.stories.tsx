@@ -8,7 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/accordion';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Accordion',
@@ -111,9 +110,4 @@ export const Controlled: Story = {
 
 export const DisabledItem: Story = {
   render: () => <FaqAccordion type="single" showDisabled defaultValue="shipping" />,
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => <FaqAccordion type="single" defaultValue="shipping" />,
 };

@@ -8,7 +8,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/tooltip';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Tooltip',
@@ -123,9 +122,4 @@ export const InstantOpen: Story = {
       <TooltipContent>No open delay</TooltipContent>
     </Tooltip>
   ),
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => <BasicTooltip />,
 };

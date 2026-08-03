@@ -59,6 +59,9 @@
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
   --color-border: var(--border);
+  --color-surface-border: var(--surface-border);
+  --color-surface-shadow: var(--surface-shadow);
+  --color-text: var(--text);
   --color-input: var(--input);
   --color-ring: var(--ring);
 

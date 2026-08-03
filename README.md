@@ -1,6 +1,6 @@
 # CompLib
 
-CompLib is a React component library with a warm, chocolate-inspired semantic theme. It provides accessible, typed primitives built with React, TypeScript, Tailwind CSS, and Storybook.
+CompLib is a React component library with a warm earthy semantic theme. It provides accessible, typed primitives built with React, TypeScript, Tailwind CSS, and Storybook.
 
 ---
 
@@ -40,8 +40,6 @@ CompLib is a React component library with a warm, chocolate-inspired semantic th
 import { Button, Input } from 'complib';
 import 'complib/styles.css';
 ```
-
-Apply `className="dark"` or `data-theme="dark"` to a parent element to use the dark theme.
 
 ## Development
 

@@ -17,7 +17,6 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@/components/dropdown-menu';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/DropdownMenu',
@@ -153,9 +152,4 @@ export const WithSubmenus: Story = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => <BasicMenu />,
 };

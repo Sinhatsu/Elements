@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-
 import { Input } from '@/components/input';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Input',
@@ -58,12 +56,5 @@ export const Password: Story = {
     type: 'password',
     placeholder: 'Enter your password',
     'aria-label': 'Password',
-  },
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  args: {
-    defaultValue: 'jane@example.com',
   },
 };

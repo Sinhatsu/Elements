@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Check, ChevronRight, Clock } from 'lucide-react';
 
 import { Badge } from '@/components/badge';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Badge',
@@ -63,11 +62,4 @@ export const WithIcons: Story = {
       </Badge>
     </div>
   ),
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  args: {
-    children: 'New release',
-  },
 };

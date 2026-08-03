@@ -13,7 +13,6 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from '@/components/command';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Command',
@@ -79,8 +78,3 @@ function CommandPaletteExample() {
 }
 
 export const Default: Story = { render: () => <CommandPaletteExample /> };
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  render: () => <CommandPaletteExample />,
-};

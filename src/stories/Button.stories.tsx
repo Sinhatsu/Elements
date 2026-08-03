@@ -4,7 +4,6 @@ import { ArrowRight, Mail, Plus } from 'lucide-react';
 import { fn } from 'storybook/test';
 
 import { Button } from '@/components/button';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Button',
@@ -77,12 +76,5 @@ export const Disabled: Story = {
   args: {
     children: 'Submit',
     disabled: true,
-  },
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
-  args: {
-    children: 'Continue',
   },
 };

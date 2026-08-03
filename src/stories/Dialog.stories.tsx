@@ -12,7 +12,6 @@ import {
   DialogTrigger,
 } from '@/components/dialog';
 import { Input } from '@/components/input';
-import { withDarkTheme } from '../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Dialog',
@@ -58,10 +57,5 @@ function AccountDialog() {
 }
 
 export const Default: Story = {
-  render: () => <AccountDialog />,
-};
-
-export const DarkMode: Story = {
-  decorators: [withDarkTheme],
   render: () => <AccountDialog />,
 };
