@@ -13,10 +13,13 @@ CompLib is a React component library with a warm earthy semantic theme. It provi
 ## Components
 
 - Accordion
+- Alert
 - Avatar
 - Badge
+- Breadcrumb
 - Button
 - Card
+- Checkbox
 - Command
 - Data Table
 - Dialog
@@ -24,11 +27,16 @@ CompLib is a React component library with a warm earthy semantic theme. It provi
 - File Upload
 - Input
 - OTP Input
+- Pagination
 - Popover
+- Progress
+- Radio Group
 - Select
 - Separator
+- Sheet
 - Skeleton
 - Spinner
+- Switch
 - Tabs
 - Textarea
 - Toast

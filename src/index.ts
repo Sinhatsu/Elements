@@ -221,4 +221,77 @@ export {
   type AvatarProps,
 } from './components/avatar';
 export { Skeleton, type SkeletonProps } from './components/skeleton';
+export { Switch, type SwitchProps } from './components/switch';
+export { Checkbox, type CheckboxProps } from './components/checkbox';
+export {
+  RadioGroup,
+  RadioGroupItem,
+  type RadioGroupItemProps,
+  type RadioGroupProps,
+} from './components/radio-group';
+export {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetOverlay,
+  SheetPortal,
+  SheetTitle,
+  SheetTrigger,
+  sheetVariants,
+  type SheetCloseProps,
+  type SheetContentProps,
+  type SheetDescriptionProps,
+  type SheetFooterProps,
+  type SheetHeaderProps,
+  type SheetOverlayProps,
+  type SheetPortalProps,
+  type SheetProps,
+  type SheetTitleProps,
+  type SheetTriggerProps,
+} from './components/sheet';
+export {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+  alertVariants,
+  type AlertDescriptionProps,
+  type AlertProps,
+  type AlertTitleProps,
+} from './components/alert';
+export { Progress, type ProgressProps } from './components/progress';
+export {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  type BreadcrumbEllipsisProps,
+  type BreadcrumbItemProps,
+  type BreadcrumbLinkProps,
+  type BreadcrumbListProps,
+  type BreadcrumbPageProps,
+  type BreadcrumbProps,
+  type BreadcrumbSeparatorProps,
+} from './components/breadcrumb';
+export {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+  type PaginationContentProps,
+  type PaginationEllipsisProps,
+  type PaginationItemProps,
+  type PaginationLinkProps,
+  type PaginationNextProps,
+  type PaginationPreviousProps,
+  type PaginationProps,
+} from './components/pagination';
 export { useFieldDescription } from './hooks/use-field-description';
