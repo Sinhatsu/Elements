@@ -200,10 +200,22 @@ function dismissToast(toastId?: string) {
   dispatch({ type: 'DISMISS_TOAST', toastId });
 }
 
-toast.success = (props: Omit<ToastInput, 'variant'>) => toast({ ...props, variant: 'success' });
-toast.error = (props: Omit<ToastInput, 'variant'>) => toast({ ...props, variant: 'error' });
-toast.warning = (props: Omit<ToastInput, 'variant'>) => toast({ ...props, variant: 'warning' });
-toast.info = (props: Omit<ToastInput, 'variant'>) => toast({ ...props, variant: 'info' });
+type HelperToastInput = string | Omit<ToastInput, 'variant'>;
+type HelperOptions = Omit<ToastInput, 'variant' | 'title'>;
+
+function createHelperToast(variant: ToastVariant) {
+  return (titleOrProps: HelperToastInput, options?: HelperOptions) => {
+    if (typeof titleOrProps === 'string') {
+      return toast({ title: titleOrProps, ...options, variant });
+    }
+    return toast({ ...titleOrProps, variant });
+  };
+}
+
+toast.success = createHelperToast('success');
+toast.error = createHelperToast('error');
+toast.warning = createHelperToast('warning');
+toast.info = createHelperToast('info');
 
 function useToast() {
   const state = useSyncExternalStore(subscribe, getState, getState);
