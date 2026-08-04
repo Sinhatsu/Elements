@@ -25,11 +25,13 @@ export function CardHeader({ className, ...props }: CardHeaderProps) {
   );
 }
 
-export type CardTitleProps = ComponentPropsWithoutRef<'h3'>;
+export type CardTitleProps = ComponentPropsWithoutRef<'h3'> & {
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div';
+};
 
-export function CardTitle({ className, ...props }: CardTitleProps) {
+export function CardTitle({ className, as: Component = 'h3', ...props }: CardTitleProps) {
   return (
-    <h3
+    <Component
       data-slot="card-title"
       className={cn('font-semibold leading-none tracking-tight', className)}
       {...props}

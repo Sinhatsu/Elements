@@ -19,18 +19,16 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(({ className, variant, ...p
 ));
 Alert.displayName = 'Alert';
 
-export type AlertTitleProps = HTMLAttributes<HTMLHeadingElement>;
+export type AlertTitleProps = HTMLAttributes<HTMLDivElement>;
 
-const AlertTitle = forwardRef<HTMLParagraphElement, AlertTitleProps>(
-  ({ className, ...props }, ref) => (
-    <h5
-      ref={ref}
-      data-slot="alert-title"
-      className={cn('mb-1 font-medium leading-none tracking-tight', className)}
-      {...props}
-    />
-  ),
-);
+const AlertTitle = forwardRef<HTMLDivElement, AlertTitleProps>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    data-slot="alert-title"
+    className={cn('mb-1 font-medium leading-none tracking-tight', className)}
+    {...props}
+  />
+));
 AlertTitle.displayName = 'AlertTitle';
 
 export type AlertDescriptionProps = HTMLAttributes<HTMLParagraphElement>;
