@@ -6,7 +6,7 @@ A React 19 component library built with TypeScript, Tailwind CSS, and Storybook.
 
 ### 🎨 Live Storybook
 
-👉 **[Open Live Storybook](https://6a689a81f0860b8787e409c8-jdjtotvwmk.chromatic.com/)**
+👉 **[Open Live Storybook](https://main--6a689a81f0860b8787e409c8.chromatic.com/)**
 
 ---
 
